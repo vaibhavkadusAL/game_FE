@@ -1,0 +1,128 @@
+.blogs-manager-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.blogs-manager-header h1 {
+  font-size: 2rem;
+}
+
+.blogs-table-container {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
+  overflow-x: auto;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.03);
+  margin-top: 20px;
+}
+
+.blogs-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  min-width: 700px;
+}
+
+.blogs-table th, 
+.blogs-table td {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.blogs-table th {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent-cyan);
+  background: rgba(15, 23, 42, 0.01);
+}
+
+.blogs-table tr:hover td {
+  background: rgba(15, 23, 42, 0.01);
+}
+
+.table-blog-title {
+  font-weight: 600;
+  color: var(--text-main);
+  font-size: 0.95rem;
+}
+
+.table-blog-slug {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.table-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.action-btn-small {
+  background: none;
+  border: 1px solid var(--border-color);
+  padding: 6px 12px;
+  border-radius: 4px;
+  color: var(--text-muted);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: var(--transition-smooth);
+}
+
+.action-btn-small:hover {
+  color: var(--text-main);
+}
+
+.action-btn-small.edit:hover {
+  border-color: var(--accent-purple);
+  background: rgba(124, 58, 237, 0.05);
+  color: var(--accent-purple);
+}
+
+.action-btn-small.delete:hover {
+  border-color: #ef4444;
+  background: rgba(239, 68, 68, 0.05);
+  color: #ef4444;
+}
+
+.blogs-manager-search {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 10px 16px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.blogs-manager-search:focus-within {
+  border-color: var(--accent-purple);
+}
+
+.blogs-manager-search input {
+  background: none;
+  border: none;
+  color: var(--text-main);
+  width: 100%;
+  padding-left: 10px;
+  font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.blogs-manager-search input:focus {
+  outline: none;
+}
+
+.blogs-manager-search svg {
+  color: var(--text-muted);
+}
