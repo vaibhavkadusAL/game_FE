@@ -10,7 +10,7 @@ const BlogCard = ({ blog }) => {
   const getImageUrl = () => {
     if (!featuredImage) return 'https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=600&auto=format&fit=crop';
     if (featuredImage.startsWith('http') || featuredImage.startsWith('data:')) return featuredImage;
-    return `http://localhost:8080${featuredImage}`;
+    return `${import.meta.env.VITE_STATIC_URL}${featuredImage}`;
   };
 
   // Format Date

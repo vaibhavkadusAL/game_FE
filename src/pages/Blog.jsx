@@ -114,7 +114,7 @@ const Blog = () => {
   const getDetailImageUrl = (detail) => {
     if (!detail.featuredImage) return 'https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1200&auto=format&fit=crop';
     if (detail.featuredImage.startsWith('http') || detail.featuredImage.startsWith('data:')) return detail.featuredImage;
-    return `http://localhost:8080${detail.featuredImage}`;
+    return `${import.meta.env.VITE_STATIC_URL}${detail.featuredImage}`;
   };
 
   const formatDate = (dateString) => {

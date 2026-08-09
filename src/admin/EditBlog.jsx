@@ -56,7 +56,7 @@ const EditBlog = () => {
           if (targetBlog.featuredImage) {
             const previewUrl = targetBlog.featuredImage.startsWith('http') || targetBlog.featuredImage.startsWith('data:')
               ? targetBlog.featuredImage
-              : `http://localhost:8080${targetBlog.featuredImage}`;
+              : `${import.meta.env.VITE_STATIC_URL}${targetBlog.featuredImage}`;
             setImagePreview(previewUrl);
           }
         } else {
