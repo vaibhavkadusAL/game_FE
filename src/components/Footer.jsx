@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Gamepad2, Send } from 'lucide-react';
+import { Gamepad2, Send, Youtube, MessageCircle, Globe, MessageSquare } from 'lucide-react';
 import './Footer.css';
 
 const Facebook = ({ size = 20 }) => (
@@ -26,10 +26,13 @@ const Footer = () => {
             Welcome to YONO Games, your number one source for premium gaming downloads, detailed blog posts, game reviews, and platform guides. Experience top-tier entertainment and join our active community today.
           </p>
           <div className="footer-socials">
-            <a href="#" className="social-icon-btn" aria-label="Facebook"><Facebook size={16} /></a>
-            <a href="#" className="social-icon-btn" aria-label="Twitter"><Twitter size={16} /></a>
-            <a href="#" className="social-icon-btn" aria-label="Instagram"><Instagram size={16} /></a>
-            <a href="#" className="social-icon-btn" aria-label="Telegram"><Send size={16} /></a>
+            <a href="https://www.facebook.com/profile.php?id=61575853029532&_rdc=1&_rdr#" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="Facebook"><Facebook size={16} /></a>
+            <a href="https://x.com/yonorummy" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="Twitter"><Twitter size={16} /></a>
+            <a href="https://www.youtube.com/@RumyYono?themeRefresh=1" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="YouTube"><Youtube size={16} /></a>
+            <a href="https://telegram.me/channelyonorummy" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="Telegram"><Send size={16} /></a>
+            <a href="https://www.whatsapp.com/channel/0029Vb7koRoISTkJZtDAYJ12" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="WhatsApp"><MessageCircle size={16} /></a>
+            <a href="https://www.yonorummy.app/" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="Website"><Globe size={16} /></a>
+            <a href="https://www.yonorummyhelp.com/chat/pc/v6/index.html?sysnum=7fd646f7a0b8446d8e4def96f138438f&channelid=10&params={%22VIP%22:%22A%22,%22UID%22:%22B%22,%22GAME%20APP%22:%22C%22}" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="Live Chat"><MessageSquare size={16} /></a>
           </div>
         </div>
 

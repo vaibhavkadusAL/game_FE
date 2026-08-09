@@ -5,7 +5,7 @@ const MobileContact = () => {
   return (
     <div className="mobile-contact-container">
       <a 
-        href="https://wa.me/1234567890" 
+        href="https://www.whatsapp.com/channel/0029Vb7koRoISTkJZtDAYJ12" 
         target="_blank" 
         rel="noopener noreferrer" 
         className="contact-icon whatsapp"
@@ -16,7 +16,7 @@ const MobileContact = () => {
         </svg>
       </a>
       <a 
-        href="https://t.me/yonogames" 
+        href="https://telegram.me/channelyonorummy" 
         target="_blank" 
         rel="noopener noreferrer" 
         className="contact-icon telegram"
