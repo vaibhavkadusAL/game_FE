@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Gamepad2, Send, Youtube, MessageCircle, Globe, MessageSquare } from 'lucide-react';
+import { Gamepad2, Send, MessageCircle, Globe, MessageSquare } from 'lucide-react';
 import './Footer.css';
 
 const Facebook = ({ size = 20 }) => (
@@ -11,6 +11,9 @@ const Twitter = ({ size = 20 }) => (
 );
 const Instagram = ({ size = 20 }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+);
+const YouTubeIcon = ({ size = 20 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
 );
 
 const Footer = () => {
@@ -28,7 +31,7 @@ const Footer = () => {
           <div className="footer-socials">
             <a href="https://www.facebook.com/profile.php?id=61575853029532&_rdc=1&_rdr#" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="Facebook"><Facebook size={16} /></a>
             <a href="https://x.com/yonorummy" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="Twitter"><Twitter size={16} /></a>
-            <a href="https://www.youtube.com/@RumyYono?themeRefresh=1" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="YouTube"><Youtube size={16} /></a>
+            <a href="https://www.youtube.com/@RumyYono?themeRefresh=1" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="YouTube"><YouTubeIcon size={16} /></a>
             <a href="https://telegram.me/channelyonorummy" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="Telegram"><Send size={16} /></a>
             <a href="https://www.whatsapp.com/channel/0029Vb7koRoISTkJZtDAYJ12" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="WhatsApp"><MessageCircle size={16} /></a>
             <a href="https://www.yonorummy.app/" target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="Website"><Globe size={16} /></a>
