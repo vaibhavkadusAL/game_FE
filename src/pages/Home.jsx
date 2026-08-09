@@ -18,6 +18,14 @@ import DownloadButton from '../components/DownloadButton';
 import SEO from '../components/SEO';
 import blogService from '../services/blogService';
 import './Home.css';
+
+import img7UpDown from '../assets/game images/7-up-down.png';
+import imgAnderBahar from '../assets/game images/Ander-Bahar.png';
+import imgDomino from '../assets/game images/Domino.png';
+import imgDragonTiger from '../assets/game images/Dragon-&-Tiger.png';
+import imgLodo from '../assets/game images/Lodo.png';
+import imgRummy from '../assets/game images/Rummy.png';
+import imgTeenpatti from '../assets/game images/Teenpatti.png';
 const Home = () => {
   const [blogs, setBlogs] = useState([]);
   const [loadingBlogs, setLoadingBlogs] = useState(true);
@@ -46,25 +54,13 @@ const Home = () => {
   };
 
   const gamesList = [
-    { name: "Svip 777 App", bonus: "₹41", withdraw: "₹100" },
-    { name: "Diwa Games", bonus: "₹51", withdraw: "₹100" },
-    { name: "Rummy Ultra App", bonus: "₹41", withdraw: "₹100" },
-    { name: "UU Rummy App", bonus: "₹41", withdraw: "₹100" },
-    { name: "Good Slots App", bonus: "₹41", withdraw: "₹100" },
-    { name: "Spin Winner App", bonus: "₹41", withdraw: "₹100" },
-    { name: "Share Slots App", bonus: "₹41", withdraw: "₹100" },
-    { name: "Jaiho 777 Vip App", bonus: "₹41", withdraw: "₹100" }
-  ];
-
-  const thumbColors = [
-    'linear-gradient(135deg, #f59e0b, #d97706)',
-    'linear-gradient(135deg, #000000, #333333)',
-    'linear-gradient(135deg, #16a34a, #15803d)',
-    'linear-gradient(135deg, #10b981, #059669)',
-    'linear-gradient(135deg, #2563eb, #1d4ed8)',
-    'linear-gradient(135deg, #059669, #047857)',
-    'linear-gradient(135deg, #65a30d, #4d7c0f)',
-    'linear-gradient(135deg, #475569, #334155)',
+    { name: "7 Up Down", image: img7UpDown, bonus: "₹41", withdraw: "₹100", url: "https://www.joyrummyace.com/?code=J5KFRSW5141&t=1785823943" },
+    { name: "Ander Bahar", image: imgAnderBahar, bonus: "₹51", withdraw: "₹100", url: "https://yonorummy049.com/?code=VIPTM43QZFN&t=1785823790" },
+    { name: "Domino", image: imgDomino, bonus: "₹41", withdraw: "₹100", url: "https://www.winrummy36.com/?code=5XZA1DA9B4A&t=1785824136" },
+    { name: "Dragon & Tiger", image: imgDragonTiger, bonus: "₹41", withdraw: "₹100", url: "https://www.hirummyagents.app/?code=RX3KTZDCU2C&t=1772102518" },
+    { name: "Lodo", image: imgLodo, bonus: "₹41", withdraw: "₹100", url: "https://www.toprummy.xyz/?code=7K92AB3HW5M&t=1772103481" },
+    { name: "Rummy", image: imgRummy, bonus: "₹41", withdraw: "₹100", url: "https://www.hindi777refer.me/?code=7LFJSZD2MFS&t=1772102341" },
+    { name: "Teenpatti", image: imgTeenpatti, bonus: "₹41", withdraw: "₹100", url: "https://www.bossrummyo.com/?code=LSHK11YQ7BE&t=1771231579" }
   ];
 
   const faqs = [
@@ -107,8 +103,8 @@ const Home = () => {
           <div className="game-list-container">
             {gamesList.map((game, index) => (
               <div className="game-list-item" key={index}>
-                <div className="game-thumbnail" style={{ background: thumbColors[index % thumbColors.length] }}>
-                  <Gamepad2 size={28} />
+                <div className="game-thumbnail">
+                  <img src={game.image} alt={game.name} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 'inherit' }} />
                 </div>
                 <div className="game-details">
                   <h3 className="game-title">{game.name}</h3>
@@ -122,9 +118,9 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="game-action">
-                  <Link to="/#download" className="btn-download-sm">
+                  <a href={game.url} target="_blank" rel="noopener noreferrer" className="btn-download-sm">
                     <Download size={16} /> Download
-                  </Link>
+                  </a>
                 </div>
               </div>
             ))}
