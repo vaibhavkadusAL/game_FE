@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Gamepad2, 
-  ShieldCheck, 
-  Zap, 
-  Coins, 
-  Headphones, 
-  ChevronDown, 
-  ChevronUp, 
-  FileText, 
+import {
+  Gamepad2,
+  ShieldCheck,
+  Zap,
+  Coins,
+  Headphones,
+  ChevronDown,
+  ChevronUp,
+  FileText,
   Download,
   Gift
 } from 'lucide-react';
@@ -65,8 +65,8 @@ const Home = () => {
     { name: "Boss Rummy", image: bossrummy, bonus: "₹41", withdraw: "₹100", url: "https://www.bossrummyo.com/?code=LSHK11YQ7BE&t=1771231579", category: "old" }
   ];
 
-  const filteredGames = activeFilter === 'all' 
-    ? gamesList 
+  const filteredGames = activeFilter === 'all'
+    ? gamesList
     : gamesList.filter(game => game.category === activeFilter);
 
   const faqs = [
@@ -90,13 +90,10 @@ const Home = () => {
 
   return (
     <div className="home-page">
-      <SEO 
-        title="YONO Games - Play & Download Yono Games Online" 
-        description="Welcome to YONO Games, the premium hub for top rummy, slots, and arcade apps. Download the secure YONO APK and read latest platform updates." 
+      <SEO
+        title="YONO Games - Play & Download Yono Games Online"
+        description="Welcome to YONO Games, the premium hub for top rummy, slots, and arcade apps. Download the secure YONO APK and read latest platform updates."
       />
-      
-      {/* Hero Section */}
-      <Hero />
 
       {/* Horizontal Scrollable Games Section */}
       <section className="horizontal-games-section section-padding" style={{ paddingTop: '20px', paddingBottom: '0' }}>
@@ -156,6 +153,9 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Hero Section */}
+      <Hero />
+
       {/* Featured Games Section */}
       <section id="featured-games" className="featured-section section-padding">
         <div className="container">
@@ -165,19 +165,19 @@ const Home = () => {
           </div>
 
           <div className="game-filters">
-            <button 
+            <button
               className={`filter-btn ${activeFilter === 'all' ? 'active' : ''}`}
               onClick={() => setActiveFilter('all')}
             >
               All Games
             </button>
-            <button 
+            <button
               className={`filter-btn ${activeFilter === 'new' ? 'active' : ''}`}
               onClick={() => setActiveFilter('new')}
             >
               New Game
             </button>
-            <button 
+            <button
               className={`filter-btn ${activeFilter === 'old' ? 'active' : ''}`}
               onClick={() => setActiveFilter('old')}
             >

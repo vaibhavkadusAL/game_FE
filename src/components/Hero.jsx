@@ -1,6 +1,5 @@
 import React from 'react';
 import { Play } from 'lucide-react';
-import DownloadButton from './DownloadButton';
 import './Hero.css';
 
 const Hero = () => {
@@ -23,11 +22,13 @@ const Hero = () => {
         </p>
 
         <div className="hero-actions" id="download">
-          <DownloadButton label="Download YONO App" />
-          <button className="btn-premium btn-outline" onClick={handleScrollToGames}>
-            <Play size={18} fill="#fff" />
-            <span>Explore Games</span>
-          </button>
+          <div className="download-btn-container" onClick={handleScrollToGames} style={{cursor: 'pointer'}}>
+            <button className="download-btn" style={{pointerEvents: 'none'}}>
+              <Play size={20} fill="#fff" />
+              <span>Explore Games</span>
+            </button>
+            <div className="download-btn-pulse"></div>
+          </div>
         </div>
 
         <div className="hero-badge-container">
