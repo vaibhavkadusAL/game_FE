@@ -31,7 +31,6 @@ const Home = () => {
   const [blogs, setBlogs] = useState([]);
   const [loadingBlogs, setLoadingBlogs] = useState(true);
   const [openFaq, setOpenFaq] = useState(null);
-  const [activeFilter, setActiveFilter] = useState('All');
 
   useEffect(() => {
     const fetchBlogs = async () => {
@@ -56,17 +55,14 @@ const Home = () => {
   };
 
   const gamesList = [
-    { name: "Joy Rummy", image: joyrummy, bonus: "₹41", withdraw: "₹100", url: "https://www.joyrummyace.com/?code=J5KFRSW5141&t=1785823943", category: "Old Game" },
-    { name: "Yono Rummy", image: yonorummy, bonus: "₹51", withdraw: "₹100", url: "https://yonorummy049.com/?code=VIPTM43QZFN&t=1785823790", category: "Old Game" },
-    { name: "Win Rummy", image: winrummy, bonus: "₹41", withdraw: "₹100", url: "https://www.winrummy36.com/?code=5XZA1DA9B4A&t=1785824136", category: "Old Game" },
-    { name: "Hi Rummy", image: hirummy, bonus: "₹41", withdraw: "₹100", url: "https://www.hirummyagents.app/?code=RX3KTZDCU2C&t=1772102518", category: "New Game" },
-    { name: "Top Rummy", image: topRummy, bonus: "₹41", withdraw: "₹100", url: "https://www.toprummy.xyz/?code=7K92AB3HW5M&t=1772103481", category: "New Game" },
-    { name: "Hindi 777", image: hindi777, bonus: "₹41", withdraw: "₹100", url: "https://www.hindi777refer.me/?code=7LFJSZD2MFS&t=1772102341", category: "Old Game" },
-    { name: "Boss Rummy", image: bossrummy, bonus: "₹41", withdraw: "₹100", url: "https://www.bossrummyo.com/?code=LSHK11YQ7BE&t=1771231579", category: "New Game" },
-    { name: "Jaiho Rummy", image: jaihorummy, bonus: "₹41", withdraw: "₹100", url: "#", category: "New Game" }
+    { name: "Joy Rummy", image: joyrummy, bonus: "₹41", withdraw: "₹100", url: "https://www.joyrummyace.com/?code=J5KFRSW5141&t=1785823943" },
+    { name: "Yono Rummy", image: yonorummy, bonus: "₹51", withdraw: "₹100", url: "https://yonorummy049.com/?code=VIPTM43QZFN&t=1785823790" },
+    { name: "Win Rummy", image: winrummy, bonus: "₹41", withdraw: "₹100", url: "https://www.winrummy36.com/?code=5XZA1DA9B4A&t=1785824136" },
+    { name: "Hi Rummy", image: hirummy, bonus: "₹41", withdraw: "₹100", url: "https://www.hirummyagents.app/?code=RX3KTZDCU2C&t=1772102518" },
+    { name: "Top Rummy", image: topRummy, bonus: "₹41", withdraw: "₹100", url: "https://www.toprummy.xyz/?code=7K92AB3HW5M&t=1772103481" },
+    { name: "Hindi 777", image: hindi777, bonus: "₹41", withdraw: "₹100", url: "https://www.hindi777refer.me/?code=7LFJSZD2MFS&t=1772102341" },
+    { name: "Boss Rummy", image: bossrummy, bonus: "₹41", withdraw: "₹100", url: "https://www.bossrummyo.com/?code=LSHK11YQ7BE&t=1771231579" }
   ];
-
-  const filteredGames = activeFilter === 'All' ? gamesList : gamesList.filter(game => game.category === activeFilter);
 
   const faqs = [
     {
@@ -105,14 +101,8 @@ const Home = () => {
             <p>Select from our most popular titles, download the APK, and start playing instantly.</p>
           </div>
 
-          <div className="game-filters">
-            <button className={`filter-btn ${activeFilter === 'All' ? 'active' : ''}`} onClick={() => setActiveFilter('All')}>All Games</button>
-            <button className={`filter-btn ${activeFilter === 'New Game' ? 'active' : ''}`} onClick={() => setActiveFilter('New Game')}>New Game</button>
-            <button className={`filter-btn ${activeFilter === 'Old Game' ? 'active' : ''}`} onClick={() => setActiveFilter('Old Game')}>Old Game</button>
-          </div>
-
           <div className="game-list-container">
-            {filteredGames.map((game, index) => (
+            {gamesList.map((game, index) => (
               <div className="game-list-item" key={index}>
                 <div className="game-thumbnail">
                   <img src={game.image} alt={game.name} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 'inherit' }} />
