@@ -31,6 +31,7 @@ const Home = () => {
   const [blogs, setBlogs] = useState([]);
   const [loadingBlogs, setLoadingBlogs] = useState(true);
   const [openFaq, setOpenFaq] = useState(null);
+  const [activeFilter, setActiveFilter] = useState('all');
 
   useEffect(() => {
     const fetchBlogs = async () => {
@@ -55,14 +56,18 @@ const Home = () => {
   };
 
   const gamesList = [
-    { name: "Joy Rummy", image: joyrummy, bonus: "₹41", withdraw: "₹100", url: "https://www.joyrummyace.com/?code=J5KFRSW5141&t=1785823943" },
-    { name: "Yono Rummy", image: yonorummy, bonus: "₹51", withdraw: "₹100", url: "https://yonorummy049.com/?code=VIPTM43QZFN&t=1785823790" },
-    { name: "Win Rummy", image: winrummy, bonus: "₹41", withdraw: "₹100", url: "https://www.winrummy36.com/?code=5XZA1DA9B4A&t=1785824136" },
-    { name: "Hi Rummy", image: hirummy, bonus: "₹41", withdraw: "₹100", url: "https://www.hirummyagents.app/?code=RX3KTZDCU2C&t=1772102518" },
-    { name: "Top Rummy", image: topRummy, bonus: "₹41", withdraw: "₹100", url: "https://www.toprummy.xyz/?code=7K92AB3HW5M&t=1772103481" },
-    { name: "Hindi 777", image: hindi777, bonus: "₹41", withdraw: "₹100", url: "https://www.hindi777refer.me/?code=7LFJSZD2MFS&t=1772102341" },
-    { name: "Boss Rummy", image: bossrummy, bonus: "₹41", withdraw: "₹100", url: "https://www.bossrummyo.com/?code=LSHK11YQ7BE&t=1771231579" }
+    { name: "Joy Rummy", image: joyrummy, bonus: "₹41", withdraw: "₹100", url: "https://www.joyrummyace.com/?code=J5KFRSW5141&t=1785823943", category: "new" },
+    { name: "Yono Rummy", image: yonorummy, bonus: "₹51", withdraw: "₹100", url: "https://yonorummy049.com/?code=VIPTM43QZFN&t=1785823790", category: "new" },
+    { name: "Win Rummy", image: winrummy, bonus: "₹41", withdraw: "₹100", url: "https://www.winrummy36.com/?code=5XZA1DA9B4A&t=1785824136", category: "new" },
+    { name: "Hi Rummy", image: hirummy, bonus: "₹41", withdraw: "₹100", url: "https://www.hirummyagents.app/?code=RX3KTZDCU2C&t=1772102518", category: "old" },
+    { name: "Top Rummy", image: topRummy, bonus: "₹41", withdraw: "₹100", url: "https://www.toprummy.xyz/?code=7K92AB3HW5M&t=1772103481", category: "old" },
+    { name: "Hindi 777", image: hindi777, bonus: "₹41", withdraw: "₹100", url: "https://www.hindi777refer.me/?code=7LFJSZD2MFS&t=1772102341", category: "old" },
+    { name: "Boss Rummy", image: bossrummy, bonus: "₹41", withdraw: "₹100", url: "https://www.bossrummyo.com/?code=LSHK11YQ7BE&t=1771231579", category: "old" }
   ];
+
+  const filteredGames = activeFilter === 'all' 
+    ? gamesList 
+    : gamesList.filter(game => game.category === activeFilter);
 
   const faqs = [
     {
@@ -93,6 +98,64 @@ const Home = () => {
       {/* Hero Section */}
       <Hero />
 
+      {/* Horizontal Scrollable Games Section */}
+      <section className="horizontal-games-section section-padding" style={{ paddingTop: '20px', paddingBottom: '0' }}>
+        <div className="container" style={{ maxWidth: '100%', padding: '0' }}>
+          <div className="horizontal-scroll-container">
+            <div className="horizontal-scroll-track">
+              {/* First set for seamless loop */}
+              {gamesList.map((game, index) => (
+                <div className="hz-card" key={`hz-1-${index}`}>
+                  <div className="hz-thumbnail">
+                    <img src={game.image} alt={game.name} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 'inherit' }} />
+                  </div>
+                  <div className="hz-details">
+                    <h3 className="hz-title">{game.name}</h3>
+                    <div className="hz-meta">
+                      <div className="hz-bonus">
+                        <Gift size={13} /> <span>Welcome Bonus {game.bonus}</span>
+                      </div>
+                      <div className="hz-withdraw">
+                        <Gift size={13} /> <span>Min Withdraw {game.withdraw}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="hz-action">
+                    <a href={game.url} target="_blank" rel="noopener noreferrer" className="hz-btn">
+                      <Download size={14} /> <span className="hz-btn-text">Download</span>
+                    </a>
+                  </div>
+                </div>
+              ))}
+              {/* Second set for seamless loop */}
+              {gamesList.map((game, index) => (
+                <div className="hz-card" key={`hz-2-${index}`}>
+                  <div className="hz-thumbnail">
+                    <img src={game.image} alt={game.name} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 'inherit' }} />
+                  </div>
+                  <div className="hz-details">
+                    <h3 className="hz-title">{game.name}</h3>
+                    <div className="hz-meta">
+                      <div className="hz-bonus">
+                        <Gift size={13} /> <span>Welcome Bonus {game.bonus}</span>
+                      </div>
+                      <div className="hz-withdraw">
+                        <Gift size={13} /> <span>Min Withdraw {game.withdraw}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="hz-action">
+                    <a href={game.url} target="_blank" rel="noopener noreferrer" className="hz-btn">
+                      <Download size={14} /> <span className="hz-btn-text">Download</span>
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Featured Games Section */}
       <section id="featured-games" className="featured-section section-padding">
         <div className="container">
@@ -101,8 +164,29 @@ const Home = () => {
             <p>Select from our most popular titles, download the APK, and start playing instantly.</p>
           </div>
 
+          <div className="game-filters">
+            <button 
+              className={`filter-btn ${activeFilter === 'all' ? 'active' : ''}`}
+              onClick={() => setActiveFilter('all')}
+            >
+              All Games
+            </button>
+            <button 
+              className={`filter-btn ${activeFilter === 'new' ? 'active' : ''}`}
+              onClick={() => setActiveFilter('new')}
+            >
+              New Game
+            </button>
+            <button 
+              className={`filter-btn ${activeFilter === 'old' ? 'active' : ''}`}
+              onClick={() => setActiveFilter('old')}
+            >
+              Old Game
+            </button>
+          </div>
+
           <div className="game-list-container">
-            {gamesList.map((game, index) => (
+            {filteredGames.map((game, index) => (
               <div className="game-list-item" key={index}>
                 <div className="game-thumbnail">
                   <img src={game.image} alt={game.name} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 'inherit' }} />

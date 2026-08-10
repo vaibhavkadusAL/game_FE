@@ -14,7 +14,6 @@ const Hero = () => {
   return (
     <section className="hero-section">
       <div className="hero-content fade-in">
-        <div className="hero-tag">🔥 Instant Play & Download</div>
         <h1 className="hero-title">
           <span className="text-gradient-purple">The Ultimate Portal For</span>
           <span className="text-gradient-cyan">Yono Games APK</span>
