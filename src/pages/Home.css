@@ -32,40 +32,68 @@
   line-height: 1.6;
 }
 
+.game-filters {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.filter-btn {
+  padding: 8px 20px;
+  border-radius: 20px;
+  border: 1px solid var(--accent-purple);
+  background: transparent;
+  color: var(--text-main);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn.active, .filter-btn:hover {
+  background: linear-gradient(135deg, var(--accent-purple) 0%, var(--accent-pink) 100%);
+  color: #fff;
+  border-color: transparent;
+}
+
 .game-list-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: 100%;
-  max-width: 800px;
+  max-width: 100%;
   margin: 0 auto;
-  background: #ffffff;
-  border-radius: var(--border-radius-lg);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-  overflow: hidden;
+  background: transparent;
+  overflow-x: auto;
+  gap: 16px;
+  padding-bottom: 16px;
+  -webkit-overflow-scrolling: touch;
 }
 
 .game-list-item {
   display: flex;
   align-items: center;
-  width: 100%;
+  min-width: 340px;
   box-sizing: border-box;
   padding: 16px 20px;
-  border-bottom: 1px solid #eaeaea;
+  border: 1px solid #eaeaea;
+  border-radius: var(--border-radius-lg);
   background: #ffffff;
-  transition: background-color 0.2s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .game-list-item:last-child {
-  border-bottom: none;
+  /* Keep border since it is no longer a stack */
 }
 
 .game-list-item:hover {
-  background: #f9fafb;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
 }
 
 .game-thumbnail {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -85,7 +113,7 @@
 }
 
 .game-title {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   font-weight: 800;
   color: #111827;
   margin: 0;
@@ -105,7 +133,7 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   font-weight: 700;
   line-height: 1.3;
 }
@@ -494,7 +522,7 @@
   }
 
   .game-list-container {
-    max-width: 90%;
+    max-width: 100%;
   }
 
   .guide-steps {
@@ -554,20 +582,20 @@
   }
 
   .game-list-item {
-    width: 100%;
+    min-width: 280px;
     padding: 12px 14px;
     box-sizing: border-box;
   }
 
   .game-thumbnail {
-    width: 55px;
-    height: 55px;
+    width: 65px;
+    height: 65px;
     margin-right: 12px;
     border-radius: 10px;
   }
 
   .game-title {
-    font-size: 1.05rem;
+    font-size: 1.15rem;
   }
 
   .game-meta {
@@ -736,9 +764,9 @@
   }
 
   .game-thumbnail {
-    width: 48px;
-    height: 48px;
-    min-width: 48px;
+    width: 55px;
+    height: 55px;
+    min-width: 55px;
     margin-right: 9px;
     border-radius: 9px;
   }
