@@ -9,8 +9,8 @@ const Terms = () => {
         description="Review the terms and conditions for using the YONO Games platform. Learn about intellectual property, acceptable usage, and limitation of liability." 
         slug="terms-conditions"
       />
-      <div className="container" style={{ maxWidth: '800px', margin: '0 auto', color: 'var(--text-muted)', lineHeight: '1.8' }}>
-        <h1 className="text-gradient-purple" style={{ fontSize: '2.5rem', marginBottom: '24px', textAlign: 'center' }}>Terms & Conditions</h1>
+      <div className="container" style={{ maxWidth: '800px', margin: '0 auto', padding: '0 20px', boxSizing: 'border-box', wordBreak: 'break-word', color: 'var(--text-muted)', lineHeight: '1.8' }}>
+        <h1 className="text-gradient-purple" style={{ fontSize: 'clamp(1.8rem, 5vw, 2.5rem)', marginBottom: '24px', textAlign: 'center' }}>Terms & Conditions</h1>
         <p style={{ marginBottom: '20px' }}>Last Updated: July 16, 2026</p>
 
         <p style={{ marginBottom: '20px' }}>
@@ -21,7 +21,7 @@ const Terms = () => {
           By accessing this website we assume you accept these terms and conditions. Do not continue to use YONO Games if you do not agree to take all of the terms and conditions stated on this page.
         </p>
 
-        <h2 style={{ color: '#fff', fontSize: '1.5rem', marginTop: '30px', marginBottom: '12px' }}>1. License & Intellectual Property</h2>
+        <h2 style={{ color: '#fff', fontSize: 'clamp(1.2rem, 4vw, 1.5rem)', marginTop: '30px', marginBottom: '12px' }}>1. License & Intellectual Property</h2>
         <p style={{ marginBottom: '20px' }}>
           Unless otherwise stated, YONO Games and/or its licensors own the intellectual property rights for all material on YONO Games. All intellectual property rights are reserved. You may access this from YONO Games for your own personal use subjected to restrictions set in these terms and conditions.
         </p>
@@ -33,17 +33,17 @@ const Terms = () => {
           <li style={{ marginBottom: '8px' }}>Redistribute content from YONO Games</li>
         </ul>
 
-        <h2 style={{ color: '#fff', fontSize: '1.5rem', marginTop: '30px', marginBottom: '12px' }}>2. User Comments & Content</h2>
+        <h2 style={{ color: '#fff', fontSize: 'clamp(1.2rem, 4vw, 1.5rem)', marginTop: '30px', marginBottom: '12px' }}>2. User Comments & Content</h2>
         <p style={{ marginBottom: '20px' }}>
           Parts of this website offer an opportunity for users to post and exchange opinions and information in certain areas of the website. YONO Games does not filter, edit, publish or review Comments prior to their presence on the website. Comments do not reflect the views and opinions of YONO Games, its agents and/or affiliates.
         </p>
 
-        <h2 style={{ color: '#fff', fontSize: '1.5rem', marginTop: '30px', marginBottom: '12px' }}>3. Hyperlinking to our Content</h2>
+        <h2 style={{ color: '#fff', fontSize: 'clamp(1.2rem, 4vw, 1.5rem)', marginTop: '30px', marginBottom: '12px' }}>3. Hyperlinking to our Content</h2>
         <p style={{ marginBottom: '20px' }}>
           The following organizations may link to our Website without prior written approval: government agencies, search engines, news organizations, and online directory distributors.
         </p>
 
-        <h2 style={{ color: '#fff', fontSize: '1.5rem', marginTop: '30px', marginBottom: '12px' }}>4. Disclaimer of Liability</h2>
+        <h2 style={{ color: '#fff', fontSize: 'clamp(1.2rem, 4vw, 1.5rem)', marginTop: '30px', marginBottom: '12px' }}>4. Disclaimer of Liability</h2>
         <p style={{ marginBottom: '20px' }}>
           To the maximum extent permitted by applicable law, we exclude all representations, warranties and conditions relating to our website and the use of this website. Nothing in this disclaimer will:
         </p>

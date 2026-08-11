@@ -21,7 +21,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-brand">
-          <Link to="/" className="footer-logo">
+          <Link to="/" className="footer-logo" onClick={() => window.scrollTo(0, 0)}>
             <Gamepad2 size={26} color="#00f2fe" />
             <span>YONO</span>GAMES
           </Link>
@@ -42,19 +42,19 @@ const Footer = () => {
         <div className="footer-links-col">
           <h3>Quick Links</h3>
           <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About Us</Link></li>
-            <li><Link to="/blogs">Latest Blogs</Link></li>
-            <li><Link to="/contact">Contact Support</Link></li>
+            <li><Link to="/" onClick={() => window.scrollTo(0, 0)}>Home</Link></li>
+            <li><Link to="/about" onClick={() => window.scrollTo(0, 0)}>About Us</Link></li>
+            <li><Link to="/blogs" onClick={() => window.scrollTo(0, 0)}>Latest Blogs</Link></li>
+            <li><Link to="/contact" onClick={() => window.scrollTo(0, 0)}>Contact Support</Link></li>
           </ul>
         </div>
 
         <div className="footer-links-col">
           <h3>Legal Information</h3>
           <ul>
-            <li><Link to="/privacy-policy">Privacy Policy</Link></li>
-            <li><Link to="/terms-conditions">Terms & Conditions</Link></li>
-            <li><Link to="/disclaimer">Disclaimer</Link></li>
+            <li><Link to="/privacy-policy" onClick={() => window.scrollTo(0, 0)}>Privacy Policy</Link></li>
+            <li><Link to="/terms-conditions" onClick={() => window.scrollTo(0, 0)}>Terms & Conditions</Link></li>
+            <li><Link to="/disclaimer" onClick={() => window.scrollTo(0, 0)}>Disclaimer</Link></li>
           </ul>
         </div>
 
@@ -64,7 +64,7 @@ const Footer = () => {
             <li>Email: support@yonostoreapp.com</li>
             <li>Hours: 24/7 Online Support</li>
             <li style={{ marginTop: '8px' }}>
-              <Link to="/admin/login" className="btn-premium btn-outline" style={{ fontSize: '0.75rem', padding: '6px 12px', borderRadius: '4px' }}>
+              <Link to="/admin/login" className="btn-premium btn-outline" style={{ fontSize: '0.75rem', padding: '6px 12px', borderRadius: '4px' }} onClick={() => window.scrollTo(0, 0)}>
                 Admin Portal
               </Link>
             </li>
