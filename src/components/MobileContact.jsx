@@ -5,7 +5,8 @@ const MobileContact = () => {
   return (
     <div className="mobile-contact-container">
       <a
-        href="https://www.whatsapp.com"
+        href="#"
+        onClick={(e) => e.preventDefault()}
         target="_blank"
         rel="noopener noreferrer"
         className="contact-icon whatsapp"
@@ -16,7 +17,8 @@ const MobileContact = () => {
         </svg>
       </a>
       <a
-        href="https://telegram.me"
+        href="#"
+        onClick={(e) => e.preventDefault()}
         target="_blank"
         rel="noopener noreferrer"
         className="contact-icon telegram"

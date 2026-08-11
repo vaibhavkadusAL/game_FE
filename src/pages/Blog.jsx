@@ -235,9 +235,9 @@ const Blog = () => {
             <div className="blog-sidebar-widget">
               <h3>Share Post</h3>
               <div className="blog-share-buttons">
-                <a href={`https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`} target="_blank" rel="noopener noreferrer" className="share-btn" aria-label="Facebook"><Facebook size={18} /></a>
-                <a href={`https://twitter.com/intent/tweet?url=${window.location.href}`} target="_blank" rel="noopener noreferrer" className="share-btn" aria-label="Twitter"><Twitter size={18} /></a>
-                <a href={`https://t.me/share/url?url=${window.location.href}`} target="_blank" rel="noopener noreferrer" className="share-btn" aria-label="Telegram"><Send size={18} /></a>
+                <a href="#" onClick={(e) => e.preventDefault()} target="_blank" rel="noopener noreferrer" className="share-btn" aria-label="Facebook"><Facebook size={18} /></a>
+                <a href="#" onClick={(e) => e.preventDefault()} target="_blank" rel="noopener noreferrer" className="share-btn" aria-label="Twitter"><Twitter size={18} /></a>
+                <a href="#" onClick={(e) => e.preventDefault()} target="_blank" rel="noopener noreferrer" className="share-btn" aria-label="Telegram"><Send size={18} /></a>
               </div>
             </div>
 
