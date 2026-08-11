@@ -2,8 +2,12 @@ import React from 'react';
 import { ArrowDownCircle } from 'lucide-react';
 import './DownloadButton.css';
 
-const DownloadButton = ({ label = "Download APK Now", apkUrl = "#" }) => {
+const DownloadButton = ({ label = "Download APK Now", apkUrl = "#", onClick }) => {
   const handleDownload = (e) => {
+    if (onClick) {
+      onClick(e);
+      return;
+    }
     if (apkUrl === "#") {
       e.preventDefault();
       alert("Preparing your YONO Games APK download package... Ready! (Mock Download Started)");

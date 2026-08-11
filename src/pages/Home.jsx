@@ -55,6 +55,13 @@ const Home = () => {
     setOpenFaq(openFaq === index ? null : index);
   };
 
+  const handleScrollToGames = () => {
+    const gamesSection = document.getElementById('featured-games');
+    if (gamesSection) {
+      gamesSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const gamesList = [
     { name: "Joy Rummy", image: joyrummy, bonus: "₹41", withdraw: "₹100", url: "https://www.joyrummyace.com/?code=J5KFRSW5141&t=1785823943", category: "new" },
     { name: "Yono Rummy", image: yonorummy, bonus: "₹51", withdraw: "₹100", url: "https://yonorummy049.com/?code=VIPTM43QZFN&t=1785823790", category: "new" },
@@ -273,7 +280,7 @@ const Home = () => {
           </div>
 
           <div className="guide-cta-container">
-            <DownloadButton label="Download Secure APK" />
+            <DownloadButton label="Download Secure APK" onClick={handleScrollToGames} />
             <span className="guide-cta-note">Compatible with all Android versions 5.0+ and iOS devices.</span>
           </div>
         </div>
