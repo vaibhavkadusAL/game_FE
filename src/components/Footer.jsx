@@ -63,11 +63,7 @@ const Footer = () => {
           <ul style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>
             <li>Email: support@yonostoreapp.com</li>
             <li>Hours: 24/7 Online Support</li>
-            <li style={{ marginTop: '8px' }}>
-              <Link to="/admin/login" className="btn-premium btn-outline" style={{ fontSize: '0.75rem', padding: '6px 12px', borderRadius: '4px' }} onClick={() => window.scrollTo(0, 0)}>
-                Admin Portal
-              </Link>
-            </li>
+            
           </ul>
         </div>
       </div>
