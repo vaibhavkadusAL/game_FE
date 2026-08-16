@@ -9,7 +9,7 @@ const SEO = ({
   slug = ""
 }) => {
   
-  const siteUrl = "https://yonostoreapp.com"; // Default base URL matching production references
+  const siteUrl = "https://yonoallstores.in"; // Default base URL matching production references
   const currentUrl = slug ? `${siteUrl}/${slug}` : siteUrl;
   const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
   const displayTitle = title.includes("YONO Games") ? title : `${title} | YONO Games`;
