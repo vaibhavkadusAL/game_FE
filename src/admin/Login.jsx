@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { Gamepad2, Lock, User, ArrowLeft } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import authService from '../services/authService';
@@ -90,6 +91,9 @@ const Login = () => {
 
   return (
     <div className="admin-login-page">
+      <Helmet>
+        <meta name="robots" content="noindex, nofollow" />
+      </Helmet>
       <div className="login-card fade-in">
         <div className="login-header">
           <div className="login-logo">

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Outlet, Link, NavLink, useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { 
   LayoutDashboard, 
   FileText, 
@@ -26,6 +27,9 @@ const AdminLayout = () => {
 
   return (
     <div className="admin-layout">
+      <Helmet>
+        <meta name="robots" content="noindex, nofollow" />
+      </Helmet>
       {/* Admin Mobile Top Bar */}
       <header className="admin-mobile-header">
         <button className="sidebar-toggle" onClick={() => setSidebarOpen(!sidebarOpen)}>
